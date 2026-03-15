@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Finder</title>
+    <link rel="icon" href="img/procurar.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <img src="img/procurar.png" alt="Logo" class="logo" />
+        GitHub User Finder
+      </h1>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter GitHub username..."
+          autocomplete="off"
+        />
+        <button onclick="searchUser()">Search</button>
+      </div>
+
+      <div class="loading" id="loading">Searching...</div>
+      <div class="error" id="error"></div>
+
+      <div class="user-info" id="userInfo">
+        <div class="profile-header">
+          <img id="avatar" class="avatar" alt="User Avatar" />
+          <div class="user-details">
+            <div class="user-name" id="name"></div>
+            <div class="user-login" id="login"></div>
+            <div class="user-bio" id="bio"></div>
+            <div class="user-meta">
+              <div class="meta-item">
+                <div class="meta-value" id="repos">0</div>
+                <div class="meta-label">Repositories</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-value" id="followers">0</div>
+                <div class="meta-label">Followers</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-value" id="following">0</div>
+                <div class="meta-label">Following</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-value" id="gists">0</div>
+                <div class="meta-label">Gists</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="user-links">
+          <a id="profileLink" href="#" target="_blank">View Profile</a>
+          <a id="reposLink" href="#" target="_blank">View Repos</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
